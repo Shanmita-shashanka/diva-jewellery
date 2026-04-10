@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="success-container">
+
+    <div class="success-card">
+
+        <h2 class="success-title">Order Confirmed ✓</h2>
+
+        <p class="success-msg">
+            Thank you <strong>{{ name }}</strong> 💖<br>
+            Your order has been placed successfully.
+        </p>
+
+        <!-- PRODUCT -->
+        <div class="order-product">
+            <img src="{{ product.image }}">
+            <div>
+                <h4>{{ product.name }}</h4>
+                <p>₹{{ product.price }}</p>
+            </div>
+        </div>
+
+        <p class="delivery">
+            🚚 Estimated delivery: 3–5 days
+        </p>
+
+        <a href="/shop" class="continue-btn">Continue Shopping</a>
+
+    </div>
+
+</div>
+
+{% endblock %}

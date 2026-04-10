@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DIVA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <h2>DIVA Jewellery</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+    </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+</body>
+</html>

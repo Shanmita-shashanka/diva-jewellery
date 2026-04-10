@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2 class="heading">Collection</h2>
+
+<div class="grid">
+
+    {% for p in products %}
+    <div class="card">
+
+        <!-- Bestseller Tag -->
+        <span class="badge">Bestseller</span>
+
+        <!-- Product Image -->
+        <img src="{{ p.image }}" alt="">
+
+        <!-- Product Name -->
+        <h3>{{ p.name }}</h3>
+
+        <!-- Price -->
+        <p class="price">₹{{ p.price }}</p>
+
+        <!-- Button -->
+        <button onclick="location.href='/cart/{{ loop.index0 }}'">Add to Cart</button>    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
